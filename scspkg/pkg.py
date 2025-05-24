@@ -57,6 +57,8 @@ class Package:
             'PYTHONPATH': [os.path.join(self.pkg_root, 'bin'),
                            os.path.join(self.pkg_root, 'lib'),
                            os.path.join(self.pkg_root, 'lib64')],
+            'PKG_CONFIG_PATH': [os.path.join(self.pkg_root, 'lib', 'pkgconfig'),
+                                os.path.join(self.pkg_root, 'lib64', 'pkgconfig')],
             'CFLAGS': [],
             'LDFLAGS': []
         }
