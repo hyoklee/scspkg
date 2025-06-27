@@ -1,0 +1,26 @@
+package:
+  name: scspkg
+  version: 0.0.0
+
+source:
+  git_url: https://github.com/grc-iit/scspkg
+  git_depth: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - iowarp::jarvis_util
+  run:
+    - python
+
+test:
+  requires:
+    - iowarp::jarvis_util
+  commands:
+    - scspkg
+
+about:
+  home: https://grc.iit.edu/research/projects/iowarp/
+  license: BSD
+  summary: IOWarp scspkg Conda Package
