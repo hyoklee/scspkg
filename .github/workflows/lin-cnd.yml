@@ -38,8 +38,8 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v4
         with:
-          name: scspkg-0.0.0-py312_0.tar.bz2
-          path: /usr/share/miniconda/envs/test/conda-bld/linux-64/scspkg-0.0.0-py312_0.tar.bz2
+          name: scspkg-0.0.0-py312_0.conda
+          path: /usr/share/miniconda/envs/test/conda-bld/linux-64/scspkg-0.0.0-py312_0.conda
       - name: release
         run: |
-          anaconda -t  "${{ secrets.ANACONDA_TOKEN }}" upload /usr/share/miniconda/envs/test/conda-bld/linux-64/scspkg-0.0.0-py312_0.tar.bz2
+          anaconda -t  "${{ secrets.ANACONDA_TOKEN }}" upload /usr/share/miniconda/envs/test/conda-bld/linux-64/scspkg-0.0.0-py312_0.conda
