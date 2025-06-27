@@ -15,17 +15,18 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - name: install
-        run:  |
-          sudo apt-get update
-          sudo apt-get install \
-          autoconf automake autoconf-archive doxygen \
-          libboost-dev libboost-fiber-dev libboost-regex-dev \
-          libelf-dev openmpi-bin openmpi-common mpi-default-dev python3-dev
+      # - name: install
+      #   run:  |
+      #     sudo apt-get update
+      #     sudo apt-get install \
+      #     autoconf automake autoconf-archive doxygen \
+      #     libboost-dev libboost-fiber-dev libboost-regex-dev \
+      #     libelf-dev openmpi-bin openmpi-common mpi-default-dev python3-dev
       - name: miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
+          python-version: 3.12.9
           channels: conda-forge
       - name: build-conda
         run: |
