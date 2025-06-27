@@ -23,7 +23,7 @@ test:
     - tabulate
     - iowarp::jarvis_util
   commands:
-    - scspkg
+    - scspkg init
 
 about:
   home: https://grc.iit.edu/research/projects/iowarp/
