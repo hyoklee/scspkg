@@ -13,10 +13,14 @@ requirements:
     - iowarp::jarvis_util
   run:
     - python
+    - pyaml
+    - tabulate
+    - iowarp::jarvis_util
 
 test:
   requires:
     - pyaml
+    - tabulate
     - iowarp::jarvis_util
   commands:
     - scspkg
