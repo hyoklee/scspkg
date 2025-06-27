@@ -27,7 +27,7 @@ jobs:
         with:
           auto-update-conda: true
           python-version: 3.12.9
-          channels: conda-forge
+          channels: [conda-forge, iowarp]
       - name: build-conda
         run: |
           env
